@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./styles.css";
+import logo from './logo.svg'
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -30,12 +31,17 @@ function App() {
 
   return (
     <div>
+<div className= "container">
     
     <div>
+    <img src={logo} alt = "" width="100" height="50" />
+    </div>
+    <div>
+    <h1>Contacts App </h1>
         <input
           className="search"
           type="text"
-          placeholder="Search your contacts..."
+          placeholder="Search your contacts here..."
           value={searchText}
           onChange={handleSearch}
         />
@@ -47,25 +53,33 @@ function App() {
       <tr>
           <th>Name</th>
           <th>Email</th>
-          <th>Address</th> 
+          <th>Website</th> 
       </tr>
       </thead>
       <tbody>
       
         {filteredUsers.map((user) => (
+
             <tr key={user.id}>
               <td>{user.name}</td>
               <td>{user.email}</td>
               <td>
-                {user.address.city}, {user.address.country}
-              </td>
+                www.{user.website}</td>
             </tr>
         ))}
         
       </tbody>
       </table>
+      
     </div>
+    
+    </div>
+    
   );
 }
 
 export default App;
+
+
+
+
