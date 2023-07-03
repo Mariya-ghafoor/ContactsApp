@@ -31,24 +31,24 @@ function App() {
 
   return (
     <div>
-<div className= "container">
+      <div className= "container">
     
-    <div>
-    <img src={logo} alt = "" width="100" height="50" />
-    </div>
-    <div>
-    <h1>Contacts App </h1>
-        <input
+        <div>
+          <img src={logo} alt = "" width="100" height="50" />
+        </div>
+      <div>
+          <h1>Contacts App </h1>
+          <input
           className="search"
           type="text"
           placeholder="Search your contacts here..."
           value={searchText}
           onChange={handleSearch}
-        />
+          />
         
       </div>
+
       <table> 
-        
       <thead>
       <tr>
           <th>Name</th>
@@ -57,7 +57,6 @@ function App() {
       </tr>
       </thead>
       <tbody>
-      
         {filteredUsers.map((user) => (
 
             <tr key={user.id}>
