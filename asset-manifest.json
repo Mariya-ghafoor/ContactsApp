@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/ContactsApp/static/css/main.a3e3eff2.css",
+    "main.js": "/ContactsApp/static/js/main.669d9b32.js",
+    "static/media/logo.svg": "/ContactsApp/static/media/logo.989c844373e9a5bd6bc3198c2816398b.svg",
+    "index.html": "/ContactsApp/index.html",
+    "main.a3e3eff2.css.map": "/ContactsApp/static/css/main.a3e3eff2.css.map",
+    "main.669d9b32.js.map": "/ContactsApp/static/js/main.669d9b32.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a3e3eff2.css",
+    "static/js/main.669d9b32.js"
+  ]
+}
