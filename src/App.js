@@ -7,6 +7,7 @@ function App() {
   const [searchText, setSearchText] = useState("");
   const [filteredUsers, setFilteredUsers] = useState([]);
 
+  //useEffect hook executes after the component renders. If there are no dependencies it renders only once when component re-renders
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
@@ -19,14 +20,16 @@ function App() {
       });
   }, []);
 
+  // The handleSearch function is called whenever the value of the search input field changes.
   const handleSearch = (event) => {
-    const searchText = event.target.value;
-    setSearchText(searchText);
-
+    const searchText = event.target.value; 
+    setSearchText(searchText); //It updates the searchText state with the new value entered by the user.
+    
+ //It filters the users array based on the searchText using the filter method and case-insensitive comparison of the user's name.
     const filteredUsers = users.filter((user) =>
       user.name.toLowerCase().includes(searchText.toLowerCase())
     );
-    setFilteredUsers(filteredUsers);
+    setFilteredUsers(filteredUsers); //The filtered users are stored in the filteredUsers state.
   };
 
   return (
